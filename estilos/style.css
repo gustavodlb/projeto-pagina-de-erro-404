@@ -17,7 +17,8 @@
     min-height: 100vh;
     grid-template-columns: repeat(2, 1fr);
 }
- /* Texto */
+
+/* Texto */
 .erro {
     width: 80%;
 }
@@ -36,6 +37,7 @@ p {
     margin-top: 1rem;
     line-height: 2rem;
 }
+
 /* Configuração do botão */
 .botao1 {
     font-weight: 500;
@@ -71,11 +73,12 @@ p {
 .botao2:hover {
     background: none !important;
     box-shadow: none !important;
-} 
+}
 
 .botao2:hover::before {
     transform: scaleX(1);
 }
+
 /* Configuração da animação da img */
 img {
     height: 60vh;
@@ -83,30 +86,55 @@ img {
 }
 
 @keyframes MoveUpDowm {
-    0%{
-        transform:translateY(10px);
+    0% {
+        transform: translateY(10px);
     }
 
-    100%{
-        transform:translateY(-10px);
+    100% {
+        transform: translateY(-10px);
     }
 }
 
-@media screen and (max-width: 998px) {
+@media (max-width:984px) {
     .home {
-        display: block;
-        width: 100%;
+        display: flex;
+        min-width: 50%;
+        min-width: 80vh;
     }
 
-    .erro {
-        width: 100%;
-        margin: 18rem 9rem auto;
-        text-align: center;
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 22px;
+        letter-spacing: 1.5;
+
     }
 
     img {
-        margin-top: 2rem;
+        min-width: 50%;
+        height: auto;
     }
-    
 }
 
+@media (max-width:630px) {
+    .home {
+        height: 50vh;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .erro {
+        width: 60%;
+        overflow: hidden;
+    }
+
+    img {
+    height: 50vh;
+    margin-top: 17px;
+    }
+}
